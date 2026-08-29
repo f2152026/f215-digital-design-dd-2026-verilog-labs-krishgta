@@ -22,7 +22,7 @@ module ripple_adder(
 
   wire c1, c2, c3;
 
-  
+
 
   FA_Gate FA0 (
         .a(a[0]),
@@ -53,7 +53,7 @@ FA_Gate FA3 (
         .b(b[3]),
         .cin(c3),
         .sum(sum[3]),
-        .cout(c4)
+        .cout(cout)
 
     );
 
