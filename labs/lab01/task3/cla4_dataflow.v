@@ -27,7 +27,7 @@ module cla4_dataflow(
   assign #(2) p = a ^ b;
     assign #(2) g = a & b;
 
-    
+
 
     assign #(2) c1   = g[0] | (p[0] & cin);
     assign #(2) c2   = g[1] | (p[1] & g[0]) | (p[1] & p[0] & cin);
@@ -39,6 +39,8 @@ module cla4_dataflow(
 
 
 assign #(2) sum = p ^ {c3, c2, c1, cin};
+
+
 
 
 

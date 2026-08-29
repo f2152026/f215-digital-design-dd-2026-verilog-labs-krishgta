@@ -34,12 +34,15 @@ module tb;
     #20 t_a = 4'b1010; t_b = 4'b0101; t_cin = 0;
     #20 $finish;
 
-    
+
 
 
   end
 
   initial
     $monitor($time, " a=%b b=%b cin=%b | sum=%b cout=%b", t_a, t_b, t_cin, t_sum, t_cout);
+
+
+    
 
 endmodule
