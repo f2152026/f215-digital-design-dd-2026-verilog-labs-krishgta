@@ -12,18 +12,12 @@ module tb;
   wire [3:0] t_sum;
   wire       t_cout;
 
-  
-
-
-
   ripple_adder DUT (
     .a    (t_a),
     .b    (t_b),
     .cin  (t_cin),
     .sum  (t_sum),
     .cout (t_cout)
-
-
   );
 
   // Waveform dump configuration
@@ -33,10 +27,7 @@ module tb;
       $dumpfile(vcd_file);
       $dumpvars(0, DUT);
     end
-
-
   end
-
 
   initial begin
     t_a = 4'b0000; t_b = 4'b0000; t_cin = 0;
@@ -49,7 +40,6 @@ module tb;
 
   initial
     $monitor($time, " a=%b b=%b cin=%b | sum=%b cout=%b", t_a, t_b, t_cin, t_sum, t_cout);
-
-
+    
 
 endmodule
