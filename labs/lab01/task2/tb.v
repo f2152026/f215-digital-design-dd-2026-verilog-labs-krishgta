@@ -27,8 +27,10 @@ module tb;
       $dumpfile(vcd_file);
       $dumpvars(0, DUT);
     end
-    
+
+
   end
+  
 
   initial begin
     t_a = 4'b0000; t_b = 4'b0000; t_cin = 0;

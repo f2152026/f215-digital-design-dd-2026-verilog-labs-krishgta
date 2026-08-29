@@ -52,7 +52,9 @@ FA_Gate FA3 (
         .cin(c3),
         .sum(sum[3]),
         .cout(c4)
+
     );
+    
 
   
 
