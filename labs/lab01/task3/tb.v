@@ -33,6 +33,8 @@ module tb;
     #20 t_a = 4'b0101; t_b = 4'b0011; t_cin = 1;
     #20 t_a = 4'b1010; t_b = 4'b0101; t_cin = 0;
     #20 $finish;
+
+    
   end
 
   initial
