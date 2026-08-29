@@ -18,6 +18,8 @@ module tb;
     .cin  (t_cin),
     .sum  (t_sum),
     .cout (t_cout)
+
+    
   );
 
   // Waveform dump configuration
@@ -30,7 +32,7 @@ module tb;
 
 
   end
-  
+
 
   initial begin
     t_a = 4'b0000; t_b = 4'b0000; t_cin = 0;
