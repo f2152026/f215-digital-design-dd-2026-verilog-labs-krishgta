@@ -27,6 +27,7 @@ module tb;
       $dumpfile(vcd_file);
       $dumpvars(0, DUT);
     end
+    
   end
 
   initial begin
@@ -40,5 +41,7 @@ module tb;
 
   initial
     $monitor($time, " a=%b b=%b cin=%b | sum=%b cout=%b", t_a, t_b, t_cin, t_sum, t_cout);
+
+
 
 endmodule
