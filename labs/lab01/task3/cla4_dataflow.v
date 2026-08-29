@@ -27,6 +27,8 @@ module cla4_dataflow(
   assign #(2) p = a ^ b;
     assign #(2) g = a & b;
 
+    
+
     assign #(2) c1   = g[0] | (p[0] & cin);
     assign #(2) c2   = g[1] | (p[1] & g[0]) | (p[1] & p[0] & cin);
     assign #(2) c3   = g[2] | (p[2] & g[1]) | (p[2] & p[1] & g[0]) | (p[2] & p[1] & p[0] & cin);

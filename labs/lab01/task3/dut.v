@@ -18,6 +18,8 @@ module dut(
 
   
 
+
+
   // ---- Option 2: gate-level carry-lookahead adder ----
   // cla4 U_IMPL (.a(a), .b(b), .cin(cin), .sum(sum), .cout(cout));
 
