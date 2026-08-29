@@ -14,6 +14,8 @@ module tb;
 
   
 
+
+
   ripple_adder DUT (
     .a    (t_a),
     .b    (t_b),
