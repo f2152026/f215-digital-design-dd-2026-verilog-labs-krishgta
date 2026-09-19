@@ -11,6 +11,8 @@ module comp2 (
   output       EQ
 );
 
+
+
   assign EQ = (A == B);
   assign GT = (A >  B);   // fixed: was A >= B, which overlapped with EQ
   assign LT = (A <  B);
