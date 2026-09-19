@@ -3,7 +3,6 @@
 
 module tb;
 
-
   reg  [1:0] A, B;
   wire       GT, LT, EQ;
   integer    i, j;
@@ -57,27 +56,5 @@ module tb;
 
     $finish;
   end
-
-endmodule
-
-And the fixed comp2.v (same as before, in case you still need it):
-
-verilog
-// comp2.v
-// 2-bit unsigned magnitude comparator.
-// Given two 2-bit values A and B, exactly one of GT, LT, EQ should be 1
-// for any input combination.
-
-module comp2 (
-  input  [1:0] A,
-  input  [1:0] B,
-  output       GT,
-  output       LT,
-  output       EQ
-);
-
-  assign EQ = (A == B);
-  assign GT = (A >  B);   // fixed: was A >= B, which overlapped with EQ
-  assign LT = (A <  B);
 
 endmodule

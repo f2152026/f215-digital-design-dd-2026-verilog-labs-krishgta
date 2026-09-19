@@ -9,17 +9,10 @@ module comp2 (
   output       GT,
   output       LT,
   output       EQ
-  
-
-
 );
 
-
-
-
-
   assign EQ = (A == B);
-  assign GT = (A >  B);   // fixed: was A >= B, which overlapped with EQ
+  assign GT = (A >  B);
   assign LT = (A <  B);
 
 endmodule
