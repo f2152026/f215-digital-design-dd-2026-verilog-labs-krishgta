@@ -8,7 +8,6 @@ module mux_beh (
   output reg Y  // Changed from wire to reg for procedural assignment in always block
 );
 
-
   always @(*) begin
     if (S)
       Y = I1;

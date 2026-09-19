@@ -1,22 +1,22 @@
 // tb.v
-// Starter testbench template
+// Testbench for 2-to-1 multiplexer
 
 module tb;
 
+  // DUT inputs
+  reg t_i0;
+  reg t_i1;
+  reg t_s;
 
-
-  // Declare DUT inputs as reg
-  reg t_i0, t_i1, t_s;
-  
-  // Declare DUT output as wire
+  // DUT output
   wire t_y;
 
   // Instantiate DUT
-  DUT uut (
-    .I0 (t_i0),
-    .I1 (t_i1),
-    .S  (t_s),
-    .Y  (t_y)
+  DUT DUT (
+    .I0(t_i0),
+    .I1(t_i1),
+    .S(t_s),
+    .Y(t_y)
   );
 
   // Waveform dump configuration
@@ -28,17 +28,38 @@ module tb;
     end
   end
 
-  // Test stimulus: Iterate through all 8 input combinations 5 time units apart
-  integer i;
+  // Apply all 8 combinations
   initial begin
-    for (i = 0; i < 8; i = i + 1) begin
-      {t_i0, t_i1, t_s} = i[2:0];
-      #5;
-    end
+
+    t_i0 = 0; t_i1 = 0; t_s = 0;
+    #5;
+
+    t_i0 = 0; t_i1 = 0; t_s = 1;
+    #5;
+
+    t_i0 = 0; t_i1 = 1; t_s = 0;
+    #5;
+
+    t_i0 = 0; t_i1 = 1; t_s = 1;
+    #5;
+
+    t_i0 = 1; t_i1 = 0; t_s = 0;
+    #5;
+
+    t_i0 = 1; t_i1 = 0; t_s = 1;
+    #5;
+
+    t_i0 = 1; t_i1 = 1; t_s = 0;
+    #5;
+
+    t_i0 = 1; t_i1 = 1; t_s = 1;
+    #5;
+
     $finish;
   end
 
   initial
-    $monitor($time, " I0=%b I1=%b S=%b | Y=%b", t_i0, t_i1, t_s, t_y);
+    $monitor($time, " I0=%b I1=%b S=%b | Y=%b",
+             t_i0, t_i1, t_s, t_y);
 
 endmodule
