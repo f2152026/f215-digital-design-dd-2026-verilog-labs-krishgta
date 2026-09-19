@@ -6,9 +6,8 @@ module comp2 (
   input  [1:0] B,
   output       GT,
   output       LT,
-
   output       EQ
-  
+
 );
 
   assign EQ = (A == B);
