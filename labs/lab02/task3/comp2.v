@@ -9,6 +9,9 @@ module comp2 (
   output       GT,
   output       LT,
   output       EQ
+  
+
+
 );
 
 
