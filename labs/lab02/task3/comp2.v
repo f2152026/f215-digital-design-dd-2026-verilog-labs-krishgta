@@ -1,19 +1,16 @@
 // comp2.v
-// 2-bit unsigned magnitude comparator.
+// 2-bit unsigned magnitude comparator
 
 module comp2 (
-  input  [1:0] A,
-  input  [1:0] B,
-  output       GT,
-  output       LT,
-  output       EQ
-
+  input  wire [1:0] A,
+  input  wire [1:0] B,
+  output wire GT,
+  output wire LT,
+  output wire EQ
 );
 
-  assign EQ = (A == B);
-  
   assign GT = (A > B);
-
   assign LT = (A < B);
+  assign EQ = (A == B);
 
 endmodule
