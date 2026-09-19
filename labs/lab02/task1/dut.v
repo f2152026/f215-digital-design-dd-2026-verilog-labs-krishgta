@@ -17,6 +17,7 @@ module DUT (
     .S  (S),
     .Y  (Y)
   );
+  
 
   // ---- Option 2: behavioral version ----
   // mux_beh U1 (

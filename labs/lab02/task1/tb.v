@@ -3,6 +3,8 @@
 
 module tb;
 
+
+
   // Declare DUT inputs as reg
   reg t_i0, t_i1, t_s;
   
