@@ -9,6 +9,8 @@ module tb;
   // Output
   wire [7:0] t_dout;
 
+  
+
   // Instantiate DUT
   lut #(
     .WIDTH(8),
